@@ -1,0 +1,22 @@
+{
+  "name": "modelC",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "refID": {
+      "type": "string",
+      "id": true
+    },
+    "refName": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,23 @@
+{
+  "name": "modelG",
+  "base": "modelE",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "propertyA": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "detail": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

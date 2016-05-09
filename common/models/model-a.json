@@ -1,0 +1,39 @@
+{
+  "name": "modelA",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userID": {
+      "type": "string",
+      "id": true,
+      "required": true
+    },
+    "username": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ModelC": {
+      "type": "hasMany",
+      "model": "modelC",
+      "foreignKey": "userID",
+      "through": "modelB",
+      "keyThrough": "refID"
+    },
+    "ModelD": {
+      "type": "hasOne",
+      "model": "modelD",
+      "foreignKey": "userID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

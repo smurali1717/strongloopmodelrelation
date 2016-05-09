@@ -1,0 +1,31 @@
+{
+  "name": "modelE",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userID": {
+      "type": "string",
+      "id": true
+    },
+    "propertyA": {
+      "type": "string"
+    },
+    "propertyB": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ModelF": {
+      "type": "hasOne",
+      "model": "modelG",
+      "foreignKey": "propertyA"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

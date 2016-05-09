@@ -1,0 +1,32 @@
+{
+  "name": "modelB",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "userID": {
+      "type": "string",
+      "id": true
+    },
+    "refID": {
+      "type": "string",
+      "id": true
+    },
+    "createdBy": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ModelC": {
+      "type": "hasOne",
+      "model": "modelC",
+      "foreignKey": "refID"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
